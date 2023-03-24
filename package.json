@@ -1,0 +1,11 @@
+{
+  "name": "zenith-bot",
+  "version": "1.0.0-beta",
+  "main": "main.js",
+  "repository": "https://github.com/GuikiPT/Zenith-Bot.git",
+  "author": "GuikiPT <foxzillapt17@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./main.js"
+  }
+}
