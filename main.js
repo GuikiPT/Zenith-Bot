@@ -55,8 +55,12 @@ const client = new Discord.Client({
     ]
 });
 
-client.on(Discord.Events.ClientReady, (c) => {
-    console.log(`Logged in as ${c.user.tag}!`);
+['events'].forEach(async (handlerName) => {
+    try {
+        await require(__dirname + '/handlers/' + handlerName)(client);
+    } catch (error) {
+        console.error(error.stack);
+    }
 });
 
 client.login(process.env.DiscordToken);
