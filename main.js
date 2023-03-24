@@ -19,6 +19,12 @@ require('better-logging')(console, {
     },
 });
 
+async function runFiglet() {
+    const result = await figlet('Zenith');
+    console.log(colors.rainbow('\n' + result));
+}
+runFiglet();
+
 const client = new Discord.Client({
     intents: [
         Discord.GatewayIntentBits.Guilds,
