@@ -1,5 +1,10 @@
 const Discord = require('discord.js');
+const colors = require('colors/safe');
+const moment = require('moment');
+const fs = require('fs');
+const figlet = require('figlet-promised');
 require('dotenv').config();
+require('better-logging')
 
 const client = new Discord.Client({
     intents: [
