@@ -5,7 +5,7 @@ const fs = require('fs');
 const figlet = require('figlet-promised');
 require('dotenv').config();
 require('better-logging')(console, {
-    format: ctx => `[${moment().format('HH:mm:ss')}] [${moment().format('L')}] ${ctx.type} >> ${ctx.msg}`,
+    format: ctx => `[${colors.gray(moment().format('HH:mm:ss'))}] [${colors.gray(moment().format('L'))}] ${ctx.type} >> ${ctx.msg}`,
     saveToFile: `${__dirname}/logs/${moment().format('YYYY')}/${moment().format('M')}/${moment().format('D')}.log`,
     color: {
         base: colors.grey,
