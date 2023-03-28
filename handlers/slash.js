@@ -13,7 +13,7 @@ module.exports = async function (client) {
             for (const file of commandFiles) {
                 const command = require(__dirname + `/../commands/slash/${folder}/${file}`);
                 if ('data' in command && 'execute' in command) {
-                    client.commands.set(command.data.name, command);
+                    client.slashCommands.set(command.data.name, command);
                     numbercommandsLoaded++;
                 } else {
                     console.log(`[WARNING] The command at /commands/slash/${folder}/${file} is missing a required "data" or "execute" property.`);
