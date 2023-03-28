@@ -54,6 +54,8 @@ const client = new Discord.Client({
         Discord.Partials.ThreadMember,
     ]
 });
+client.slashCommands = new Discord.Collection();
+
 
 ['events', 'slash'].forEach(async (handlerName) => {
     try {
