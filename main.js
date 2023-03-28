@@ -55,7 +55,7 @@ const client = new Discord.Client({
     ]
 });
 
-['events'].forEach(async (handlerName) => {
+['events', 'slash'].forEach(async (handlerName) => {
     try {
         await require(__dirname + '/handlers/' + handlerName)(client);
     } catch (error) {
