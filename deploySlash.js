@@ -8,7 +8,7 @@ const commandFolders = fs.readdirSync(__dirname + '/commands/slash');
 for (const folder of commandFolders) {
     const commandFiles = fs.readdirSync(__dirname + `/commands/slash/${folder}`).filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
-        const command = require(__dirname + `/../events/${folder}/${file}`);
+        const command = require(__dirname + `/commands/slash/${folder}/${file}`);
         commands.push(command.data.toJSON());
     }
 }
