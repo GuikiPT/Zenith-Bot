@@ -14,7 +14,7 @@ module.exports = {
             if (!command) return;
 
             try {
-                await command.execute(client, interaction);
+                await command.execute(interaction);
             } catch (error) {
                 console.error(error.stack);
                 if (interaction.replied || interaction.deferred) {
