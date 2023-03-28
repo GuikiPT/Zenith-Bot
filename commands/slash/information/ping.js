@@ -17,6 +17,6 @@ module.exports = {
                 { name: 'API Latency', value: '```ini\n [' + client.ws.ping + 'ms ]```', inline: true }
             )
             .setTimestamp()
-        return await interaction.editReply({ content: '', embeds: [PingEmbed] });
+        return interaction.editReply({ content: '', embeds: [PingEmbed] });
     },
 };
